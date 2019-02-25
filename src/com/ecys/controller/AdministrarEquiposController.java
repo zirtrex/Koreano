@@ -107,7 +107,7 @@ public class AdministrarEquiposController extends AnchorPane implements Initiali
         addTextLimiter(tfNombre, 50);
         addTextLimiter(tfMarca, 20);
         addTextLimiter(tfModelo, 100);
-        addTextLimiter(tfPlaca, 6);
+        addTextLimiter(tfPlaca, 7);
         addTextLimiter(tfHorometro, 14);
         addTextLimiter(tfKilometraje, 13);
         addTextLimiter(tfAnio, 4);
