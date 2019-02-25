@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="400.0" styleClass="fondo-login" stylesheets="@../../../assets/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ecys.controller.LoginController">
+   <children>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="400.0">
+         <children>
+            <HBox alignment="TOP_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="400.0" styleClass="barra-titulo">
+               <children>
+                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="22.0" prefWidth="60.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="22.0" prefWidth="60.0" styleClass="botones-principales">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#handleHideAction" text="_" textAlignment="CENTER" textFill="WHITE" />
+                              <Button mnemonicParsing="false" onAction="#handleCloseAction" text="X" textAlignment="CENTER" textFill="WHITE" />
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <InnerShadow choke="0.06" color="WHITE" height="5.0" offsetY="-1.0" radius="0.75" width="0.0" />
+                           </effect>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="220.0" prefWidth="400.0">
+               <children>
+                  <ImageView disable="true" fitWidth="130.0" layoutX="5.0" layoutY="45.0" opacity="0.9" pickOnBounds="true" preserveRatio="true" smooth="false">
+                     <image>
+                        <Image url="@../../../assets/Logo-Koreano.png" />
+                     </image>
+                     <effect>
+                        <Reflection fraction="0.2" topOpacity="0.2" />
+                     </effect></ImageView>
+                  <TextField id="0" fx:id="tfUsuario" layoutX="140.0" layoutY="60.0" prefHeight="35.0" prefWidth="190.0" promptText="Usuario">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font size="14.0" />
+                     </font></TextField>
+                  <PasswordField id="1" fx:id="pfClave" layoutX="160.0" layoutY="110.0" prefHeight="35.0" prefWidth="190.0" promptText="Clave">
+                     <font>
+                        <Font size="14.0" />
+                     </font></PasswordField>
+                  <Button id="2" fx:id="btnIngresar" alignment="CENTER" layoutX="300.0" layoutY="150.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleLoginAction" prefHeight="48.0" prefWidth="48.0" styleClass="btn-entrar" textAlignment="CENTER">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <Glow level="0.5" />
+                     </effect></Button>
+                  <AnchorPane fx:id="apTitle" layoutY="-25.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="200.0" styleClass="titulo-login">
+                     <children>
+                        <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="200.0">
+                           <children>
+                              <Label style="-fx-label-padding: 3px;" text="INGRESAR" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                                 <opaqueInsets>
+                                    <Insets left="10.0" />
+                                 </opaqueInsets>
+                                 <effect>
+                                    <Glow />
+                                 </effect>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow color="#00000082" offsetX="5.0" offsetY="5.0" />
+                     </effect>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="30.0" prefWidth="400.0" styleClass="barra-estado">
+               <children>
+                  <Label fx:id="lblDescripcion" layoutX="10.0" layoutY="5.0" text="Descripción" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets left="10.0" />
+                     </opaqueInsets>
+                     <effect>
+                        <Glow />
+                     </effect></Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

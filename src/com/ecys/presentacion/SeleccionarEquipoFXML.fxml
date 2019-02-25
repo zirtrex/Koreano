@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="960.0" styleClass="fondo-principal" stylesheets="@../../../assets/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ecys.controller.SeleccionarEquipoController">
+   <children>
+      <VBox alignment="TOP_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="960.0">
+         <children>
+            <HBox fx:id="hbHandleTitle" alignment="TOP_RIGHT" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="960.0" styleClass="barra-titulo">
+               <children>
+                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="960.0">
+                     <children>
+                        <Label fx:id="lblTitulo" layoutX="10.0" layoutY="5.0" text="Seleccionar Equipo" textFill="WHITE">
+                           <effect>
+                              <Glow />
+                           </effect>
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="MOVE" />
+               </cursor>
+            </HBox>
+            <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="470.0" prefWidth="960.0">
+               <children>
+                  <VBox layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="940.0" spacing="10.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="940.0" spacing="20.0" style="-fx-padding: 0 0 0 10px;" styleClass="fondo-estandar">
+                           <children>
+                              <Label layoutX="10.0" layoutY="4.0" text="Buscar por:" textFill="WHITE" />
+                              <RadioButton fx:id="rbCodigo" layoutX="367.0" layoutY="10.0" mnemonicParsing="false" selected="true" text="Código" textFill="WHITE">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="tgBuscarPor" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton fx:id="rbNombre" layoutX="100.0" layoutY="10.0" mnemonicParsing="false" text="Nombre" textFill="WHITE" toggleGroup="$tgBuscarPor" />
+                              <RadioButton fx:id="rbMarca" layoutX="288.0" layoutY="10.0" mnemonicParsing="false" text="Marca" textFill="WHITE" toggleGroup="$tgBuscarPor" />
+                              <TextField fx:id="tfBuscar" layoutX="460.0" layoutY="7.0" prefHeight="25.0" prefWidth="480.0" />
+                              <Button fx:id="btnAceptar" mnemonicParsing="false" prefHeight="32.0" prefWidth="32.0" styleClass="btn-aceptar-32">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button fx:id="btnVolver" mnemonicParsing="false" prefHeight="32.0" prefWidth="32.0" styleClass="btn-atras-32">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="940.0" styleClass="fondo-listar">
+                           <children>
+                              <Label layoutX="10.0" layoutY="5.0" text="Equipos" textFill="WHITE" />
+                              <TableView fx:id="tblEquipo" editable="true" layoutX="10.0" layoutY="30.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="360.0" prefWidth="920.0">
+                                 <columns>
+                                    <TableColumn fx:id="codigoEquipo" editable="false" prefWidth="90.0" resizable="false" text="Código" />
+                                    <TableColumn fx:id="nombre" prefWidth="250.0" text="Nombre" />
+                                    <TableColumn fx:id="marca" minWidth="0.0" prefWidth="120.0" text="Marca" />
+                                    <TableColumn fx:id="categoria" minWidth="0.0" prefWidth="120.0" resizable="false" text="Categoría" />
+                                    <TableColumn fx:id="operativo" minWidth="-Infinity" text="Operativo" />
+                                    <TableColumn fx:id="observaciones" minWidth="0.0" prefWidth="256.0" text="Observaciones" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="960.0" styleClass="barra-estado">
+               <children>
+                  <Label fx:id="lblDescripcion" layoutX="10.0" layoutY="10.0" textFill="WHITE">
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

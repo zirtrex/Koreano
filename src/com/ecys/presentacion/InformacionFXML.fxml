@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="fondo-informacion" stylesheets="@../../../assets/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ecys.controller.InformacionController">
+   <children>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <HBox alignment="TOP_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="600.0" styleClass="barra-titulo" />
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="320.0" prefWidth="600.0">
+               <children>
+                  <ImageView disable="true" fitWidth="240.0" layoutX="5.0" layoutY="45.0" opacity="0.9" pickOnBounds="true" preserveRatio="true" smooth="false">
+                     <effect>
+                        <Reflection fraction="0.2" topOpacity="0.2" />
+                     </effect>
+                     <image>
+                        <Image url="@../../../assets/Logo-Koreano.png" />
+                     </image>
+                  </ImageView>
+                  <TextArea layoutX="265.0" layoutY="45.0" prefHeight="237.0" prefWidth="315.0" text="Software creado por alumnos de la Carrera&#10;de Computacion e Informatica del Instituto&#10;Superior Tecnologico &quot;UNITEK&quot; " />
+                  <Button fx:id="btnAceptar" alignment="CENTER" layoutX="522.0" layoutY="256.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="64.0" prefWidth="64.0" styleClass="btn-aceptar-64" textAlignment="CENTER">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <Glow level="0.5" />
+                     </effect>
+                  </Button>
+                  <AnchorPane fx:id="apTitle" layoutY="-25.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="titulo-login">
+                     <children>
+                        <HBox fx:id="hbHandleTitle" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="300.0">
+                           <children>
+                              <Label style="-fx-label-padding: 3px;" text="INFORMACIÓN" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+                                 <effect>
+                                    <Glow />
+                                 </effect>
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                                 <opaqueInsets>
+                                    <Insets left="10.0" />
+                                 </opaqueInsets>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow color="#00000082" offsetX="5.0" offsetY="5.0" />
+                     </effect>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="30.0" prefWidth="600.0" styleClass="barra-estado">
+               <children>
+                  <Label fx:id="lblDescripcion" layoutX="10.0" layoutY="5.0" text="Descripción" textFill="WHITE">
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets left="10.0" />
+                     </opaqueInsets>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
