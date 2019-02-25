@@ -33,7 +33,7 @@ CREATE TABLE Usuario
     CONSTRAINT pk_codUsu PRIMARY KEY(codUsuario),
     CONSTRAINT fk_codDetPer FOREIGN KEY(codDetallePersona) REFERENCES DetallePersona(codDetallePersona),
     CONSTRAINT unq_nomUsu UNIQUE(nombreUsuario),
-    CONSTRAINT chk_rol CHECK(rol IN('admin','lector')),
+    CONSTRAINT chk_rol CHECK(rol IN('admin','lector', 'secretaria')),
     CONSTRAINT chk_estUsu CHECK(estadoUsuario IN('0','1'))
   );
 INSERT INTO Usuario(codUsuario, codDetallePersona, nombreUsuario,  claveUsuario,  rol, estadoUsuario ) VALUES (  'U00000001', 'DP0000001', 'admin', 'admin', 'admin', '1' );
